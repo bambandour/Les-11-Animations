@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    perspective: 400px;
+}
+
+.container .text {
+    border: 5px solid rgb(133, 129, 129);
+    height: 120px;
+    width: 400px;
+    background-color: black;
+    color: white;
+    font-size: 90px;
+    /* overflow: hidden; */
+    position: relative;
+}
+.text::before{
+    content: 'Hoverable';
+    position: absolute;
+    border: 5px solid white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: black;
+    z-index: 1;
+    transition-property: transform;
+    transform:rotate(0,0,0,360deg);
+    transition: all 2s ease;
+    opacity: 0;
+}
+.text:hover::before{
+    transform:rotate3d(0,1,0,360deg);
+    opacity: 1;
+}
+.text::after{
+    content: 'Hoverable';
+    position: absolute;
+    border: 5px solid white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: black;
+    z-index: 1;
+    transition-property: transform;
+    transform:rotate3d(0,0,O,360deg);
+    transition: all 2s ease;
+    opacity: 0;
+}
+.text:hover::after{
+    transform:rotate3d(0,1,0,360deg);
+    opacity: 1;
+}

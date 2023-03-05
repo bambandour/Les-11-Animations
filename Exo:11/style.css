@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: relative;
+    text-align: center;
+    perspective: 400px;
+}
+.container .vert{
+    position: absolute;
+    border: 1px solid green;
+    background-color: green;
+    height: 200px;
+    width: 400px;
+    margin-top: 20%;
+    /* overflow: hidden; */
+}
+ .container .rouge{
+    position: absolute;
+    border: 1px solid red;
+    background-color: red;
+    height: 200px;
+    width: 400px;
+    margin-top: 21%;
+    right: 38%;
+}
+.container .noir{
+    position: absolute;
+    border: 1px solid black;
+    background-color: black;
+    height: 181px;
+    width: 379px;
+    margin-top: 21%;
+    right: 39.1%;
+    font-size: 45px;
+    color: #ffff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} 
+.galsen{
+    text-align: center;
+    margin-top: 18%;
+    font-weight: bolder;
+}
+.vert::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition-property: transform;
+    transform: rotateX(-45deg);
+    background-color: #008000;
+    transition: all 1s ease;
+    transform-origin: top left 0;
+}
+.vert:hover::before{
+    transform: rotateX(0);
+}
+/* .vert::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition-property: transform;
+    transform: rotateX(180deg);
+    background-color: #008000;
+    transition: all 5s ease;
+    transform-origin: top left 0;
+} */
+

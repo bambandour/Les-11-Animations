@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: O 5rem;
+    display: flex;
+}
+
+.carre1 {
+    border: 1px solid red;
+    background-color: red;
+    height: 30rem;
+    width: 30rem;
+    margin-left: 30%;
+    margin-top: 10%;
+    position: absolute;
+    transform: rotate(45deg);
+    animation-name: animation1;
+    animation-duration: 7s;
+    animation-name: animation2;
+    animation-duration: 7s;
+    transition-timing-function: ease-in-out;
+   
+
+}
+
+.carre2 {
+    border: 1px solid red;
+    background-color: red;
+    height: 30rem;
+    width: 30rem;
+    margin-left: 30%;
+    margin-top: 10%;
+    position: absolute;
+    padding-left: 5rem;
+    animation-duration: 7s;
+    animation-name: animation2;
+    animation-duration: 7s;
+    transition-timing-function: ease-in-out;
+    animation-name: animation3;
+    animation-duration: 7s;
+    transition: transform 7s 2s;
+}
+
+.container .carre2:nth-child(1) {
+    font-size: 20px;
+    color: rgb(12, 10, 10);
+    position: absolute;
+    text-align: center;
+}
+
+.container .carre2:nth-child(2) {
+    font-size: 30px;
+    color: rgb(12, 10, 10);
+    text-align: center;
+}
+
+.container .carre2:nth-child(3) {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+.container .carre2:nth-child(4) {
+    font-size: 50px;
+    color: rgb(12, 10, 10);
+    text-align: center;
+}
+
+@keyframes animation1 {
+    from {
+        border: 1px solid red;
+        background-color: red;
+        transition-timing-function: ease-in-out;
+        transition: transform 7s 2s;
+    }
+    to {
+        border-top: 10px solid white;
+        border-bottom: 10px solid white;
+        background-color: red;
+        transition-timing-function: ease-in-out;
+    }
+}
+@keyframes animation2{
+    from{
+        border-top: 10px solid white;
+        border-bottom: 10px solid white;
+        background-color: red;
+        transition-timing-function: ease-in-out;
+    }
+    to{
+       border: 10px solid white;
+       background-color: red;
+       transition-timing-function: ease-in-out;
+    }
+}
+@keyframes animation3 {
+    from{
+        border: 10px solid white;
+        background-color: red;
+        transition-timing-function: ease-in-out;
+    }
+    to{
+        border: 10px solid white;
+        background-color: red;
+        transition-timing-function: ease-in-out;
+    }
+}
